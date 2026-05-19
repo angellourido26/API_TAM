@@ -1,0 +1,5 @@
+$kind: http-request
+name: Eliminar metodo pago
+url: http://localhost:3000/userPaymentMethods/delete/1
+method: DELETE
+order: 4137

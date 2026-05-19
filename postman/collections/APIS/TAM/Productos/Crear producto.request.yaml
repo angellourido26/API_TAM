@@ -6,25 +6,35 @@ body:
   type: json
   content: "{\r
 
-    \    \"nombre\": \"Cámara Insta450 sl\",\r
+    \  \"nombre\": \"Cámara Insta450 sl\",\r
 
-    \    \"precio\": \"1679726.00\",\r
+    \  \"precio\": 1679726.00,\r
 
-    \    \"marca\": null,\r
+    \  \"marca\": \"Insta360\",\r
 
-    \    \"caracteristicas_basicas\": \"Cámara de acción 360°, resistente al
-    agua, compacta.\",\r
+    \  \"descripcion\": \"Cámara de acción 360°, resistente al agua y compacta.\",\r
 
-    \    \"caracteristicas_tecnicas\": \"Grabación 8K, estabilización FlowState,
-    batería 1800mAh, conectividad WiFi/Bluetooth.\",\r
+    \  \"caracteristicas_tecnicas\": {\r
 
-    \    \"imagen\": \"assets/img/insta360_acepro2.jpg\",\r
+    \    \"resolucion\": \"8K\",\r
 
-    \    \"stock\": 20,\r
+    \    \"estabilizacion\": \"FlowState\",\r
 
-    \    \"costo\": \"1400000.00\",\r
+    \    \"bateria\": \"1800mAh\",\r
 
-    \    \"subcategoria_id\": 3\r
+    \    \"conectividad\": \"WiFi y Bluetooth\",\r
+
+    \    \"resistente_agua\": \"Sí\"\r
+
+    \  },\r
+
+    \  \"imagen\": \"assets/img/insta360_acepro2.jpg\",\r
+
+    \  \"stock\": 20,\r
+
+    \  \"costo\": 1400000.00,\r
+
+    \  \"subcategoria_id\": 3\r
 
     }"
 order: 3619737244351843

@@ -1,0 +1,16 @@
+$kind: http-request
+name: Actualizar direccion
+url: http://localhost:3000/userAddresses/update/2
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"direccion\": \"Carrera 25 #45-10\",\r
+
+    \  \"barrio\": \"San Fernando\",\r
+
+    \  \"ciudad\": \"Bogotá\"\r
+
+    }"
+order: 4087352092533705

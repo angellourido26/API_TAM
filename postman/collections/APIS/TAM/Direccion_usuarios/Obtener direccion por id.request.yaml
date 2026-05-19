@@ -1,0 +1,5 @@
+$kind: http-request
+name: Obtener direccion por id
+url: http://localhost:3000/userAddresses/2
+method: GET
+order: 1471979552325212

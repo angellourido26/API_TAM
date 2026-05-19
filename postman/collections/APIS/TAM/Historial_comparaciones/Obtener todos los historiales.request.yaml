@@ -1,0 +1,5 @@
+$kind: http-request
+name: Obtener todos los historiales
+url: http://localhost:3000/comparisonHistories/all
+method: GET
+order: 1778700334948

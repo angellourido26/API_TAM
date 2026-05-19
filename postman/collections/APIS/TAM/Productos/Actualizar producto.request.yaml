@@ -1,18 +1,26 @@
 $kind: http-request
 name: Actualizar producto
-url: http://localhost:3000/products/update/10
+url: http://localhost:3000/products/update/60
 method: PUT
 body:
   type: json
   content: "{\r
 
-    \    \"stock\": 30,\r
+    \  \"stock\": 30,\r
 
-    \    \"precio\": \"1879726.00\",\r
+    \  \"precio\": 1879726.00,\r
 
-    \    \"caracteristicas_basicas\": \"Cámara de acción 360°\",\r
+    \  \"descripcion\": \"Cámara de acción 360° con estabilización avanzada.\",\r
 
-    \    \"caracteristicas_tecnicas\": \"Grabación 8K-4K\"\r
+    \  \"caracteristicas_tecnicas\": {\r
+
+    \    \"resolucion\": \"8K-4K\",\r
+
+    \    \"fps\": \"120fps\",\r
+
+    \    \"estabilizacion\": \"FlowState 2.0\"\r
+
+    \  }\r
 
     }"
 order: 4056981982991348

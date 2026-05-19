@@ -34,20 +34,20 @@ async function getOrderById(req: Request, res: Response): Promise<Response | voi
 async function createOrder(req: Request, res: Response) {
     const data = req.body as Order;
 
-    if (!data.cod_factura || !data.fecha || !data.valor || !data.usuario_id) {
+    if (!data.cod_factura || !data.valor || !data.usuario_id) {
         return res.status(400).json({ error: 'Faltan campos obligatorios' });
     }
 
     try {
         const result = await db.query(
             `INSERT INTO pedidos 
-            (cod_factura, fecha, canal_venta, valor, usuario_id) 
+            (cod_factura, canal_venta, valor, estado, usuario_id) 
             VALUES (?, ?, ?, ?, ?)`,
             [
                 data.cod_factura,
-                data.fecha,
                 data.canal_venta,
                 data.valor,
+                data.estado || 'pendiente',
                 data.usuario_id
             ]
         );
@@ -72,11 +72,6 @@ async function updateOrder(req: Request, res: Response): Promise<Response> {
             values.push(data.cod_factura);
         }
 
-        if (data.fecha !== undefined) {
-            fields.push('fecha = ?');
-            values.push(data.fecha);
-        }
-
         if (data.canal_venta !== undefined) {
             fields.push('canal_venta = ?');
             values.push(data.canal_venta);
@@ -85,6 +80,11 @@ async function updateOrder(req: Request, res: Response): Promise<Response> {
         if (data.valor !== undefined) {
             fields.push('valor = ?');
             values.push(data.valor);
+        }
+
+        if (data.estado !== undefined) {
+            fields.push('estado = ?');
+            values.push(data.estado);
         }
 
         if (data.usuario_id !== undefined) {

@@ -1,0 +1,5 @@
+$kind: http-request
+name: Obtener todos los metodos pago
+url: http://localhost:3000/userPaymentMethods/all
+method: GET
+order: 1000

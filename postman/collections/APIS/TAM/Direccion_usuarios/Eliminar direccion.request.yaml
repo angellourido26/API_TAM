@@ -1,0 +1,5 @@
+$kind: http-request
+name: Eliminar direccion
+url: http://localhost:3000/userAddresses/delete/2
+method: DELETE
+order: 4327505764248986

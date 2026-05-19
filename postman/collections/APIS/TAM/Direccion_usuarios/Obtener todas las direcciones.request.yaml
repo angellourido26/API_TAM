@@ -1,0 +1,5 @@
+$kind: http-request
+name: Obtener todas las direcciones
+url: http://localhost:3000/userAddresses/all
+method: GET
+order: 1778700309545

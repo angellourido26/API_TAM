@@ -42,8 +42,8 @@ async function createUser(req: Request, res: Response) {
     try {
         const result = await db.query(
             `INSERT INTO usuarios 
-            (nombre_completo, tipo_documento, identificacion, fecha_nacimiento, email, password, verificado, token_verificacion, user_name, foto_perfil, rol_id, estado) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            (nombre_completo, tipo_documento, identificacion, fecha_nacimiento, email, password, verificado, token_verificacion, user_name, foto_perfil, rol_id, estado, fecha_ultimo_intento) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
             [
                 data.nombre_completo,
                 data.tipo_documento,
@@ -56,7 +56,8 @@ async function createUser(req: Request, res: Response) {
                 data.user_name,
                 data.foto_perfil,
                 data.rol_id,
-                data.estado
+                data.estado,
+                data.fecha_ultimo_intento
             ]
         );
 
@@ -98,6 +99,11 @@ async function updateUser(req: Request, res: Response): Promise<Response> {
         if (data.estado !== undefined) {
             campos.push("estado = ?");
             valores.push(data.estado);
+        }
+
+        if (data.fecha_ultimo_intento !== undefined) {
+            campos.push("fecha_ultimo_intento = ?");
+            valores.push(data.fecha_ultimo_intento);
         }
 
         if (campos.length === 0) {

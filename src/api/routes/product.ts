@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response, Router } from "express";
 import product from '../../controllers/products';
+
 const router = Router();
 
 router.route("/all").get(product.getAllProducts);

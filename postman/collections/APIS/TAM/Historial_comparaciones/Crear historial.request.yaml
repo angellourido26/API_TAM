@@ -1,0 +1,22 @@
+$kind: http-request
+name: Crear historial
+url: http://localhost:3000/comparisonHistories/create
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"fecha\": \"2026-05-13\",\r
+
+    \  \"detalle_comparacion\": \"Comparación entre laptops gamer\",\r
+
+    \  \"producto_id_1\": 2,\r
+
+    \  \"producto_id_2\": 5,\r
+
+    \  \"producto_id_3\": 8,\r
+
+    \  \"usuario_id\": 1\r
+
+    }"
+order: 4065765463697773

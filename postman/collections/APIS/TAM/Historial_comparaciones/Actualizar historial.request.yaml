@@ -1,0 +1,14 @@
+$kind: http-request
+name: Actualizar historial
+url: http://localhost:3000/comparisonHistories/update/1
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"detalle_comparacion\": \"Comparación entre celulares gama alta\",\r
+
+    \  \"producto_id_3\": 10\r
+
+    }"
+order: 4355503319198099

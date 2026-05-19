@@ -1,0 +1,20 @@
+$kind: http-request
+name: Crear metodo pago
+url: http://localhost:3000/userPaymentMethods/create
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"usuario_id\": 1,\r
+
+    \  \"tipo\": \"Tarjeta Crédito\",\r
+
+    \  \"numero_parcial\": \"4587\",\r
+
+    \  \"titular\": \"Angello\",\r
+
+    \  \"fecha_expiracion\": \"2028-12-31\"\r
+
+    }"
+order: 3000

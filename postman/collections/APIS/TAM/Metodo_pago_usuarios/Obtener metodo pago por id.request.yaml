@@ -1,0 +1,5 @@
+$kind: http-request
+name: Obtener metodo pago por id
+url: http://localhost:3000/userPaymentMethods/1
+method: GET
+order: 2000
